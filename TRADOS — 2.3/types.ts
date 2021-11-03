@@ -36,9 +36,9 @@ class Card {
 class Product {
     image: string;
     title: string;
-    price: string;
+    price: number;
     button: string;
-    constructor(image: string, title: string, price: string, button: string) {
+    constructor(image: string, title: string, price: number, button: string) {
         this.image = image;
         this.title = title;
         this.price = price;
@@ -46,73 +46,73 @@ class Product {
     }
 }
 
-const product = new Product(
+const product: Product = new Product(
     "https://miodessa.com/wp-content/uploads/2021/03/poco_f3_12-600x600.jpg",
     "Смартфон POCO F3 (8/256gb) черный/ Night Black",
-    '31990',
+    31990,
     "Купить"
 )
 new Card(product)
-const product1 = new Product(
+const product1: Product = new Product(
     "https://miodessa.com/wp-content/uploads/2021/03/poco_f3_12-600x600.jpg",
     "Смартфон POCO F3 (6/256gb) черный/ Night Black",
-    '29990',
+    29990,
     "Купить"
 )
 new Card(product1)
-const product2 = new Product(
+const product2: Product = new Product(
     "https://miodessa.com/wp-content/uploads/2021/03/poco_f3_12-600x600.jpg",
     "Смартфон POCO F3 (4/256gb) черный/ Night Black",
-    '27990',
+    27990,
     "Купить"
 )
 new Card(product2)
-const product3 = new Product(
+const product3: Product = new Product(
     "https://miodessa.com/wp-content/uploads/2021/03/poco_f3_12-600x600.jpg",
     "Смартфон POCO F3 (8/128gb) черный/ Night Black",
-    '30990',
+    30990,
     "Купить"
 )
 new Card(product3)
-const product4 = new Product(
+const product4: Product = new Product(
     "https://miodessa.com/wp-content/uploads/2021/03/poco_f3_12-600x600.jpg",
     "Смартфон POCO F3 (6/128gb) черный/ Night Black",
-    '28990',
+    28990,
     "Купить"
 )
 new Card(product4)
-const product5 = new Product(
+const product5: Product = new Product(
     "https://miodessa.com/wp-content/uploads/2021/03/poco_f3_12-600x600.jpg",
     "Смартфон POCO F3 (4/128gb) черный/ Night Black",
-    '26990',
+    26990,
     "Купить"
 )
 new Card(product5)
-const product6 = new Product(
+const product6: Product = new Product(
     "https://miodessa.com/wp-content/uploads/2021/03/poco_f3_12-600x600.jpg",
     "Смартфон POCO F3 (4/64gb) черный/ Night Black",
-    '22990',
+    22990,
     "Купить"
 )
 new Card(product6)
-const product7 = new Product(
+const product7: Product = new Product(
     "https://miodessa.com/wp-content/uploads/2021/03/poco_f3_12-600x600.jpg",
     "Смартфон POCO F3 (6/64gb) черный/ Night Black",
-    '23990',
+    23990,
     "Купить"
 )
 new Card(product7)
-const product8 = new Product(
+const product8: Product = new Product(
     "https://miodessa.com/wp-content/uploads/2021/03/poco_f3_12-600x600.jpg",
     "Смартфон POCO F3 (8/512gb) черный/ Night Black",
-    '35990',
+    35990,
     "Купить"
 )
 new Card(product8)
-const product9 = new Product(
+const product9: Product = new Product(
     "https://miodessa.com/wp-content/uploads/2021/03/poco_f3_12-600x600.jpg",
     "Смартфон POCO F3 (6/512gb) черный/ Night Black",
-    '33990',
+    33990,
     "Купить"
 )
 new Card(product9)
@@ -141,7 +141,7 @@ function clickOpen(): void {
         // popUpBasketNumber.textContent = current.number;
 
         const popUpBasketPrice: HTMLDivElement = newCardPopUp.querySelector(".basket-price");
-        popUpBasketPrice.textContent = current.price;
+        popUpBasketPrice.textContent = String(current.price);
 
         cards.appendChild(newCardPopUp)
 
